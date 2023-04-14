@@ -31,7 +31,7 @@ const Index = (props: ComponentProps<any>) => {
 
     const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>, type: 'admin' | 'guest') => {
         event.preventDefault();
-       const { error } = await supabase.auth.signInWithPassword({email: type === 'admin' ? 'long_summer@126.com' : 'guest@126.com', password: '123456'});
+       const { error } = await supabase.auth.signInWithPassword({email: type === 'admin' ? 'private@126.com' : 'guest@126.com', password: '123456'});
         if (error) {
             setError(error.message);
         }

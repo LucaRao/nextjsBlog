@@ -27,13 +27,13 @@ excerpt    text
 
 ```
 ```angular2html
-curl -X POST '[应用网址]/auth/v1/signup' -H "apikey: [service_role]" -H "Content-Type: application/json" -d '{"email":[私人登陆邮箱],"password":"[密码]"}'
+curl -X POST '[应用网址]/auth/v1/signup' -H "apikey: [service_role]" -H "Content-Type: application/json" -d '{"email":"private@126.com","password":"123456"}'
 ```
 
 游客账户
 ```
 ```angular2html
-curl -X POST '[应用网址]/auth/v1/signup' -H "apikey: [service_role]" -H "Content-Type: application/json" -d '{"email":[游客通用邮箱],"password":"[密码]"}'
+curl -X POST '[应用网址]/auth/v1/signup' -H "apikey: [service_role]" -H "Content-Type: application/json" -d '{"email":"guest@126.com","password":"123456"}'
 ```
 
 使用创建的用户账号密码替换/pages/login.jsx中的登陆账户，修改auth.user表中私人账户角色为admin，游客账户角色为guest。
